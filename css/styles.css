@@ -1,17 +1,521 @@
-/* Файл стилей */
+/*
+* Подключаем шрифти на страницу
+*/
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("PT Sans Narrow"), local("PTSans-Narrow"),
+    url("../fonts/pt-sans-narrow-v11-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("../fonts/pt-sans-narrow-v11-latin_cyrillic-regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("PT Sans Narrow Bold"), local("PTSans-NarrowBold"),
+    url("../fonts/pt-sans-narrow-v11-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/pt-sans-narrow-v11-latin_cyrillic-700.woff") format("woff");
+}
+
 body {
   /* Позиционирование */
 
   /* Блочная модель */
-  padding: 0;
+  /*display: flex;
+  flex-direction: column;
+  min-height: 100vh;*/
   margin: 0;
+  padding: 0;
+  min-width: 960px;
   /* Типографика */
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
   text-transform: uppercase;
   /* Оформление */
-
+  background-color: #000000;
+  background-image: url("../img/bg-fon-min.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
   /* Анимация */
 
   /* Разное */
+}
+
+.inner-page {
+  color: #000000;
+
+  background-color: #f9f6f3;
+  background-image: url("../img/bg-fon-2-min.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+/*
+* Доступно прячем элементы на странице
+*/
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="file"].visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/*
+* Глобальные стили для ссылок
+*/
+
+a {
+  text-decoration: none;
+}
+
+/*
+* Глобальные стили для контентного изображения
+*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+* Стилизация кнопок
+*/
+
+.button {
+  font: inherit;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #000000;
+  border: 0;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #663d15;
+}
+
+/*
+* Стилизация контейнера для секций блоков index
+*/
+
+.index-row {
+  display: flex;
+
+  color: #000000;
+
+  background-color: #ffffff;
+  background-image: url("../img/bg-fon-2-min.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+/*
+* Основная навигация на сайте
+*/
+.nav {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.nav__list,
+.user__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav__link,
+.user__link {
+  color: #ffffff;
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.user__link:hover,
+.user__link:focus {
+  background-color: #242424;
+}
+
+/*
+* Стилизация блока преимущества index
+*/
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.advantages__item {
+  text-align: center;
+}
+
+/* Стилизация текстовых параметров всех заголовков */
+
+.advantages__title,
+.news__title,
+.gallery__title,
+.contacts__title,
+.reservation__title,
+.modal-title,
+.main-shop {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+/*
+* Стилизация блока хлебних крошок
+*/
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.breadcrumbs__link {
+  color: #000000;
+}
+
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus {
+  text-decoration: underline;
+}
+
+.breadcrumbs__current {
+  color: #aba9a7;
+}
+
+/*
+* Стилизация блока фильтр товаров shop
+*/
+
+.filter {
+  border: none;
+}
+
+.filter__title {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.filter__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter__input:hover + label,
+.filter__input:focus + label {
+  color: #663d15;
+}
+
+.filter__input:disablet + label {
+  color: #000000;
+
+  opacity: 0.5;
+}
+
+/*
+* Стилизация блока каталог shop
+*/
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog__item {
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog__item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.catalog__title {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.button__catalog {
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.catalog__category {
+  text-transform: none;
+}
+
+.catalog-price__item,
+.product-price__block {
+  font-size: 14px;
+  line-height: 24px;
+
+  text-align: center;
+
+  background-color: #e5e5e5;
+}
+
+/*
+* Стилизация pagination
+*/
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.pagination__link {
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.pagination__link:hover,
+.pagination__link:focus,
+.pagination__link:active {
+  background-color: #663d15;
+}
+
+.pagination--active {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.pagination--active:hover,
+.pagination--active:focus,
+.pagination--active:active {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+/*
+* Стилизация карточки товара item
+*/
+
+.product-photos__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.product-photos__full {
+  margin: 0;
+  padding: 0;
+
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-photos__item {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-article {
+  text-align: right;
+  color: #aeaeae;
+}
+
+.product-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+/*
+* Стилизация блока преимущества index
+*/
+
+.news__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.news__time {
+  text-transform: none;
+}
+
+/*
+* Стилизация блока фотогалереи index
+*/
+
+.gallery__content {
+  background-color: #cccccc;
+  border: 7px solid #ffffff;
+}
+
+.gallery__link {
+  display: block;
+  line-height: 0;
+  font-size: 0;
+}
+
+/*
+* Стилизация блока записаться index
+*/
+
+.reservation__date,
+.reservation__time,
+.reservation__name,
+.reservation__phone,
+.modal-login__user,
+.modal-password__user {
+  font: inherit;
+
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.reservation__date:focus,
+.reservation__time:focus,
+.reservation__name:focus,
+.reservation__phone:focus,
+.modal-login__user:focus,
+.modal-password__user:focus {
+  outline: none;
+  border: 2px solid #663d15;
+}
+
+/*
+* Стилизация блока подвал
+*/
+
+.footer {
+  /*margin-top: auto;*/
+
+  color: #ffffff;
+
+  background-color: #000000;
+  background-image: url("../img/bg-footer.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.footer__link {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  text-decoration: none;
+}
+
+.footer__social {
+  text-align: center;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__copyright {
+  text-align: center;
+}
+
+.footer__button:hover,
+.footer__button:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+/*
+* Скрываем модальные окна
+*/
+
+.modal {
+  display: none;
+  color: #000000;
+
+  background-color: #f8f3f0;
+  background-image: url("../img/bg-fon-2-min.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.modal-login {
+}
+
+.modal-map__item {
+  margin: 0;
+  padding: 0;
+  width: 764px;
+  min-height: 558px;
+
+  border: 8px solid #ffffff;
+}
+
+.modal-login__user,
+.modal-password__user {
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.modal-login__user:focus,
+.modal-password__user:focus {
+  border-color: #663d15;
+}
+
+.modal-checkbox:hover,
+.modal-checkbox:focus {
+  color: #663d15;
+}
+
+.modal-restore {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.modal-restore:hover,
+.modal-restore:focus {
+  text-decoration: none;
 }

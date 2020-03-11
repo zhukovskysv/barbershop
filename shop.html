@@ -5,40 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barbershop</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-
+<body class="inner-page">
+  <!-- Шапка сайта -->
   <header class="header">
+    <!-- Основная навигация на странице -->
     <nav class="nav">
-      <a class="logo-link" href="#">
-        <img class="logo-img" src="#" alt="Логотип">
+      <!-- Логотип компании -->
+      <a class="logo">
+        <img class="logo__image" src="img/logo.svg" alt="Логотип Барбершоп «Бородинский»">
       </a>
-      <ul class="nav-menu">
-        <li class="nav-menu__item">
-          <a class="nav-menu__link" href="#">Информация</a>
+
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="#">Информация</a>
         </li>
-        <li class="nav-menu__item">
-          <a class="nav-menu__link" href="#">Новости</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Новости</a>
         </li>
-        <li class="nav-menu__item">
-          <a class="nav-menu__link" href="#">Прайс-лист</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Прайс-лист</a>
         </li>
-        <li class="nav-menu__item">
-          <a class="nav-menu__link" href="#">Магазин</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Магазин</a>
         </li>
-        <li class="nav-menu__item">
-          <a class="nav-menu__link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <ul class="user-menu">
-        <li class="user-menu__item">
-          <a class="user-menu__link" href="#">Вход</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Контакты</a>
         </li>
       </ul>
+
+      <ul class="user__list">
+        <li class="user__item">
+          <a class="user__link" href="#">Вход</a>
+        </li>
+      </ul>
+
     </nav>
   </header>
-
+  <!-- Основной контент -->
   <main class="main">
     <h1 class="main-shop">Средства для ухода</h1>
 
@@ -71,49 +78,49 @@
                 id="filter-mr-natty">
               <label for="filter-mr-natty">MR Natty</label>
             </li>
-            <li>
+            <li class="filter__item">
               <input class="visually-hidden filter__input filter__input-checkbox" type="checkbox" name="suavecito"
                 id="filter-suavecit" checked>
               <label for="filter-suavecit">suavecito</label>
             </li>
-            <li>
+            <li class="filter__item">
               <input class="visually-hidden filter__input filter__input-checkbox" type="checkbox" name="malin-goetz"
                 id="filter-malin-goetz">
               <label for="filter-malin-goetz">Malin+Goetz</label>
             </li>
-            <li>
+            <li class="filter__item">
               <input class="visually-hidden filter__input filter__input-checkbox" type="checkbox" name="murrayts"
                 id="filter-murrayts">
               <label for="filter-murrayts">Murrayts</label>
             </li>
-            <li>
+            <li class="filter__item">
               <input class="visually-hidden filter__input filter__input-checkbox" type="checkbox" name="american-crew"
-                id="filter-american-crewy" checked>
+                id="filter-american-crew" checked>
               <label for="filter-american-crew">American crew</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend>Группы товаров:</legend>
-          <ul>
-            <li>
+        <fieldset class="filter">
+          <legend class="filter__title">Группы товаров:</legend>
+          <ul class="filter__list">
+            <li class="filter__item">
               <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group"
                 id="filter-shave" value="shaving">
               <label for="filter-shave">Бритвенные принадлежности</label>
             </li>
-            <li>
+            <li class="filter__item">
               <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group"
                 id="filter-care" value="hair-care" checked>
               <label for="filter-care">Средства для ухода</label>
             </li>
-            <li>
+            <li class="filter__item">
               <input class="visually-hidden filter__input filter__input-radio" type="radio" name="product-group"
                 id="filter-accessories" value="accessories">
               <label for="filter-accessories">Аксессуары</label>
             </li>
           </ul>
         </fieldset>
-        <button class="btn btn__filters" type="submit">Показать</button>
+        <button class="button button__filters" type="submit">Показать</button>
       </form>
 
     </section>
@@ -131,12 +138,12 @@
           </h3>
           <p class="catalog-pic">
             <a class="catalog-pic__link" href="#">
-              <img class="catalog-pic__img" src="#" alt="Фото товара">
+              <img class="catalog-pic__img" src="img/shop-img-1-min.jpg" alt="Фото товара">
             </a>
           </p>
           <p class="catalog-price">
             <b class="catalog-price__item">2 900 ₽</b>
-            <a class="btn" href="#">Купить</a>
+            <a class="button button__catalog" href="#">Купить</a>
           </p>
 
         </li>
@@ -148,12 +155,12 @@
           </h3>
           <p class="catalog-pic">
             <a class="catalog-pic__link" href="#">
-              <img class="catalog-pic__img" src="#" alt="Фото товара">
+              <img class="catalog-pic__img" src="img/shop-img-2-min.jpg" alt="Фото товара">
             </a>
           </p>
           <p class="catalog-price">
             <b class="catalog-price__item">2 900 ₽</b>
-            <a class="btn" href="#">Купить</a>
+            <a class="button button__catalog" href="#">Купить</a>
           </p>
 
         </li>
@@ -165,12 +172,12 @@
           </h3>
           <p class="catalog-pic">
             <a class="catalog-pic__link" href="#">
-              <img class="catalog-pic__img" src="#" alt="Фото товара">
+              <img class="catalog-pic__img" src="img/shop-img-3-min.jpg" alt="Фото товара">
             </a>
           </p>
           <p class="catalog-price">
             <b class="catalog-price__item">2 900 ₽</b>
-            <a class="btn" href="#">Купить</a>
+            <a class="button button__catalog" href="#">Купить</a>
           </p>
 
         </li>
@@ -182,12 +189,12 @@
           </h3>
           <p class="catalog-pic">
             <a class="catalog-pic__link" href="#">
-              <img class="catalog-pic__img" src="#" alt="Фото товара">
+              <img class="catalog-pic__img" src="img/shop-img-4-min.jpg" alt="Фото товара">
             </a>
           </p>
           <p class="catalog-price">
             <b class="catalog-price__item">2 900 ₽</b>
-            <a class="btn" href="#">Купить</a>
+            <a class="button button__catalog" href="#">Купить</a>
           </p>
 
         </li>
@@ -199,12 +206,12 @@
           </h3>
           <p class="catalog-pic">
             <a class="catalog-pic__link" href="#">
-              <img class="catalog-pic__img" src="#" alt="Фото товара">
+              <img class="catalog-pic__img" src="img/shop-img-5-min.jpg" alt="Фото товара">
             </a>
           </p>
           <p class="catalog-price">
             <b class="catalog-price__item">2 900 ₽</b>
-            <a class="btn" href="#">Купить</a>
+            <a class="button button__catalog" href="#">Купить</a>
           </p>
 
         </li>
@@ -216,85 +223,80 @@
           </h3>
           <p class="catalog-pic">
             <a class="catalog-pic__link" href="#">
-              <img class="catalog-pic__img" src="#" alt="Фото товара">
+              <img class="catalog-pic__img" src="img/shop-img-6-min.jpg" alt="Фото товара">
             </a>
           </p>
           <p class="catalog-price">
             <b class="catalog-price__item">2 900 ₽</b>
-            <a class="btn" href="#">Купить</a>
+            <a class="button button button__catalog" href="#">Купить</a>
           </p>
 
         </li>
       </ul>
 
-      <ul class="pagination-list">
-        <li class="pagination-item">
-          <a class="pagination-item__link" href="#" aria-label="Первая страница">1</a>
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <a class="pagination__link" href="#" aria-label="Первая страница">1</a>
         </li>
-        <li class="pagination-item">
-          <a class="pagination-item__link pagination-item--active" aria-label="Вторая страница">2</a>
+        <li class="pagination__item">
+          <a class="pagination__link pagination--active" aria-label="Вторая страница">2</a>
         </li>
-        <li class="pagination-item">
-          <a class="pagination-item__link" href="#" aria-label="Третья страница">3</a>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#" aria-label="Третья страница">3</a>
         </li>
-        <li class="pagination-item">
-          <a class="pagination-item__link" href="#" aria-label="Четвертая страница">4</a>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#" aria-label="Четвертая страница">4</a>
         </li>
       </ul>
 
     </section>
 
   </main>
-
+  <!-- Подвал сайта -->
   <footer class="footer">
 
-    <p class="footer-contacts">
+    <p class="footer__contacts">
       барбершоп «бородинский»<br>
       адрес: г. санкт-петербург, ул. б. конюшенная, д. 19/8<br>
-      <a class="footer-contacts__link" href="#">как нас найти?</a><br>
+      <a class="footer__link" href="#">Как нас найти?</a><br>
       телефон: +7 (495) 666-02-66
     </p>
 
-    <div class="footer-social">
-      <b class="footer-social__slogan">Давайте дружить!</b>
-      <ul class="footer-social__list">
-        <li class="footer-social__item">
-          <a class="footer-social__vk" href="#" aria-label="Вконтакте"></a>
+    <div class="footer__social">
+      <b class="footer__slogan">Давайте дружить!</b>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link-vk" href="#" aria-label="Вконтакте"></a>
         </li>
-        <li class="footer-social__item">
-          <a class="footer-social__fb" href="#" aria-label="Фейсбук"></a>
+        <li class="footer__item">
+          <a class="footer__link-fb" href="#" aria-label="Фейсбук"></a>
         </li>
-        <li class="footer-social__item">
-          <a class="footer-social__ins" href="#" aria-label="Инстаграм"></a>
+        <li class="footer__item">
+          <a class="footer__link-ins" href="#" aria-label="Инстаграм"></a>
         </li>
       </ul>
     </div>
 
-    <p class="footer-copyright">
-      <b class="footer-copyright__slogan">Разработано:</b>
-      <a class="btn btn__footer-copyringht" href="#">html academy</a>
+    <p class="footer__copyright">
+      <b class="footer__slogan">Разработано:</b>
+      <a class="button footer__button" href="#">html academy</a>
     </p>
 
   </footer>
-
+  <!-- Модальное окно авторизации -->
   <section class="modal modal-login">
-
     <h2 class="modal-title">Личный кабинет</h2>
-
     <p class="modal-text">Введите пожалуйста свой логин и пароль</p>
 
     <form class="modal-form" action="https://echo.htmlacademy.ru" method="POST">
-
       <p class="modal-login__item">
         <label class="visually-hidden" for="user-login">Логин</label>
         <input class="modal-login__user" id="user-login" type="text" name="login" placeholder="Логин">
       </p>
-
       <p class="modal-login__item">
         <label class="visually-hidden" for="user-password">Пароль</label>
         <input class="modal-password__user" id="user-password" type="password" name="password" placeholder="Пароль">
       </p>
-
       <p class="modal-login__item">
         <label class="modal-checkbox">
           <input class="visually-hidden" type="checkbox" name="remember">
@@ -303,13 +305,10 @@
         </label>
         <a class="modal-restore" href="#">Я забыл пароль!</a>
       </p>
-
-      <button class="btn" type="submit">Войти</button>
-
+      <button class="button" type="submit">Войти</button>
     </form>
 
-    <button class="btn btn__modal-close" type="button">Закрыть</button>
-
+    <button class="button modal-close__button" type="button">Закрыть</button>
   </section>
 
 </body>
